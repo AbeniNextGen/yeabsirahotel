@@ -1,0 +1,1244 @@
+
+
+
+<!DOCTYPE html> 
+
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEABSIRA HOTEL | የአብስራ ሆቴል - Premium Hospitality in Sodo, Ethiopia</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+Ethiopic:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                DEFAULT: '#C5A059',
+                50: '#FBF8F1',
+                100: '#F5EDDC',
+                200: '#EADBBA',
+                300: '#DEC997',
+                400: '#D2B878',
+                500: '#C5A059',
+                600: '#A37F39',
+                700: '#7B5E28',
+                800: '#533F19',
+                900: '#2D220B',
+              },
+              charcoal: {
+                DEFAULT: '#1A1A1A',
+                light: '#2A2A2A',
+                dark: '#121212',
+              },
+              cream: '#FAFAFA',
+              earthGreen: {
+                DEFAULT: '#2C4A3E',
+                light: '#3D6454',
+                dark: '#1D322A'
+              },
+            },
+            fontFamily: {
+              serif: ['Playfair Display', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+              ethiopic: ['Noto Sans Ethiopic', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      /* Custom Styles & Glassmorphism */
+      .glass-nav {
+        background: rgba(26, 26, 26, 0.88);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(8px);
+      }
+      .gold-gradient {
+        background: linear-gradient(135deg, #C5A059 0%, #E2C07D 50%, #A37F39 100%);
+      }
+      .gold-text-gradient {
+        background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #AA7C11 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-overlay {
+        background: linear-gradient(90deg, rgba(51, 49, 49, 0.65) 100%, rgba(26, 26, 26, 0.85) 100%);
+      }
+      /* Custom Smooth Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1A1A1A;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #C5A059;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #A37F39;
+      }
+      .slide-in {
+        animation: slideIn 0.3s ease-out forwards;
+      }
+      @keyframes slideIn {
+        from { transform: translateX(100%); }
+        to { transform: translateX(0); }
+      }
+    </style>
+</head>
+<body class="bg-cream text-charcoal font-sans antialiased selection:bg-gold selection:text-white">
+
+    <!-- BOOKING CONSTANTS -->
+    <!-- Google Form Link for Bookings -->
+    <script>
+      const BOOKING_URL = 'tel:+251999262728';
+    </script>
+
+    <!-- Header / Glassmorphism Navigation Bar -->
+    <header class="fixed top-0 left-0 w-full z-40 glass-nav border-b border-gold/20 shadow-lg transition-all duration-300" id="main-header">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          
+<!-- Brand Logo & Name -->
+<a href="#home" class="flex items-center gap-3 group">
+  <div class="w-12 h-12 rounded-full gold-gradient p-0.5 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+    <div class="w-full h-full bg-charcoal rounded-full flex items-center justify-center overflow-hidden">
+      <img
+        src="https://i.postimg.cc/Qt2VW3xQ/YH.png"
+        alt="YH Brand Logo"
+        class="w-full h-full object-contain rounded-full"
+      >
+    </div>
+  </div>
+</a>
+
+            <div class="flex flex-col">
+              <span class="font-serif font-bold text-lg sm:text-xl text-white tracking-wider flex items-center gap-2">
+                YEABSIRA HOTEL
+                <span class="text-xs bg-gold/20 text-gold px-2 py-0.5 rounded border border-gold/30 font-sans font-normal hidden sm:inline-block">Sodo</span>
+              </span>
+              <span class="text-xs text-gold font-ethiopic tracking-wide" id="logo-sub">የአብስራ ሆቴል</span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+            <a href="#home" class="text-gray-200 hover:text-gold transition-colors py-1 border-b-2 border-transparent hover:border-gold" data-en="Home" data-am="መነሻ">Home</a>
+            <a href="#about" class="text-gray-200 hover:text-gold transition-colors py-1 border-b-2 border-transparent hover:border-gold" data-en="About" data-am="ስለ እኛ">About</a>
+            <a href="#rooms" class="text-gray-200 hover:text-gold transition-colors py-1 border-b-2 border-transparent hover:border-gold" data-en="Rooms & Suites" data-am="ክፍሎች">Rooms & Suites</a>
+            <a href="#dining" class="text-gray-200 hover:text-gold transition-colors py-1 border-b-2 border-transparent hover:border-gold" data-en="Dining" data-am="ምግብና መጠጥ">Dining</a>
+            <a href="#amenities" class="text-gray-200 hover:text-gold transition-colors py-1 border-b-2 border-transparent hover:border-gold" data-en="Amenities" data-am="አገልግሎቶች">Amenities</a>
+            <a href="#location" class="text-gray-200 hover:text-gold transition-colors py-1 border-b-2 border-transparent hover:border-gold" data-en="Location" data-am="አድራሻ">Location</a>
+          </nav>
+
+          <!-- Right Action Controls -->
+          <div class="hidden lg:flex items-center gap-4">
+            <!-- Language Switcher -->
+            <div class="bg-charcoal-light border border-gold/30 rounded-full p-1 flex items-center text-xs text-white">
+              <button onclick="toggleLanguage('en')" id="btn-lang-en" class="px-3 py-1 rounded-full font-bold bg-gold text-charcoal transition-all">EN</button>
+              <button onclick="toggleLanguage('am')" id="btn-lang-am" class="px-3 py-1 rounded-full font-bold text-gray-300 hover:text-gold transition-all">አማ</button>
+            </div>
+
+            <!-- Primary CTA Button -->
+            <a href="tel:+251999262728" target="_blank" class="gold-gradient text-charcoal font-bold px-5 py-2.5 rounded-full hover:shadow-lg hover:shadow-gold/30 hover:scale-105 active:scale-95 transition-all text-sm flex items-center gap-2">
+              <i class="fa-solid fa-calendar-check"></i>
+              <span data-en="Book Your Stay" data-am="አሁኑኑ ይዘዙ">Book Your Stay</span>
+            </a>
+          </div>
+
+          <!-- Mobile Hamburger Toggle -->
+          <div class="flex items-center gap-2 md:hidden">
+            <!-- Mobile Language Switcher -->
+            <button onclick="toggleLanguage()" class="text-xs text-gold border border-gold/40 px-2 py-1 rounded-lg font-bold flex items-center gap-1">
+              <i class="fa-solid fa-globe"></i>
+              <span id="mobile-lang-label">EN/አማ</span>
+            </button>
+
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-white p-2 text-2xl focus:outline-none hover:text-gold" aria-label="Toggle menu">
+              <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-charcoal border-b border-gold/20 px-4 pt-2 pb-6 space-y-3 transition-all">
+        <a href="#home" onclick="toggleMobileMenu()" class="block text-gray-200 hover:text-gold py-2 border-b border-gray-800" data-en="Home" data-am="መነሻ">Home</a>
+        <a href="#about" onclick="toggleMobileMenu()" class="block text-gray-200 hover:text-gold py-2 border-b border-gray-800" data-en="About" data-am="ስለ እኛ">About</a>
+        <a href="#rooms" onclick="toggleMobileMenu()" class="block text-gray-200 hover:text-gold py-2 border-b border-gray-800" data-en="Rooms & Suites" data-am="ክፍሎች">Rooms & Suites</a>
+        <a href="#dining" onclick="toggleMobileMenu()" class="block text-gray-200 hover:text-gold py-2 border-b border-gray-800" data-en="Dining" data-am="ምግብና መጠጥ">Dining</a>
+        <a href="#amenities" onclick="toggleMobileMenu()" class="block text-gray-200 hover:text-gold py-2 border-b border-gray-800" data-en="Amenities" data-am="አገልግሎቶች">Amenities</a>
+        <a href="#location" onclick="toggleMobileMenu()" class="block text-gray-200 hover:text-gold py-2 border-b border-gray-800" data-en="Location & Contact" data-am="አድራሻና ስልክ">Location & Contact</a>
+        
+        <div class="pt-2">
+          <a href="tel:+251999262728" target="_blank" class="w-full text-center gold-gradient text-charcoal font-bold py-3 rounded-xl block shadow-lg flex items-center justify-center gap-2">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span data-en="Book Your Stay / Reserve Now" data-am="አሁኑኑ ይዘዙ / ቦታ ይያዙ">Book Your Stay / Reserve Now</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section with Background Slider/Image -->
+    <section id="home" class="relative min-h-screen pt-20 flex items-center justify-center bg-charcoal overflow-hidden">
+      <!-- Background Slider Container -->
+      <div class="absolute inset-0 z-0">
+        <div id="hero-bg-1" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100" style="background-image: url('https://i.postimg.cc/ZRQrjj8y/A4.avif');"></div>
+        <div id="hero-bg-2" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://i.postimg.cc/6QYV4BTS/A3.avif');"></div>
+        <div id="hero-bg-3" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://i.postimg.cc/N0JjKJLb/unnamed-(6).jpg');"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-12 md:py-24 flex flex-col items-center">
+        
+        <!-- 4.6 Star Rating Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-charcoal/80 border border-gold/40 backdrop-blur-md mb-6 shadow-xl animate-fade-in">
+          <div class="flex text-amber-400 text-sm">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <span class="font-bold text-sm text-gold">4.6 ★</span>
+          <span class="text-xs text-gray-300 border-l border-gray-600 pl-2" data-en="Rated Top Luxury Stay in Sodo" data-am="በሶዶ ከፍተኛ የደንበኞች ምስጋና ያገኘ">Rated Top Luxury Stay in Sodo</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight mb-4 leading-tight">
+          <span data-en="Experience Premium Hospitality in" data-am="በሶዶ ምርጥ የእንግዳ ተቀባይነት">Experience Premium Hospitality in</span>
+          <span class="gold-text-gradient block mt-1" data-en="Sodo, Ethiopia" data-am="አገልግሎት ያግኙ">Sodo, Ethiopia</span>
+        </h1>
+
+        <p class="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl font-light mb-10 leading-relaxed" data-en="Comfort, elegance, and traditional Ethiopian warmth wrapped into one unforgettable stay in the heart of Wolaita Sodo." data-am="ምቾት፣ ጽዳት፣ ዘመናዊነት እና ባህላዊ የእንግዳ ተቀባይነት በፍጹም እርካታ በወላይታ ሶዶ ከተማ።">
+          Comfort, elegance, and traditional Ethiopian warmth wrapped into one unforgettable stay in the heart of Wolaita Sodo.
+        </p>
+
+        <!-- Floating Quick-Booking Search Bar -->
+        <div class="w-full max-w-4xl bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-6 shadow-2xl border border-gold/30 text-charcoal">
+          <form onsubmit="handleQuickSearch(event)" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-end text-left">
+            
+            <!-- Check-in -->
+            <div class="space-y-1">
+              <label class="block text-xs font-semibold text-gray-600 uppercase tracking-wider flex items-center gap-1">
+                <i class="fa-regular fa-calendar-check text-gold"></i>
+                <span data-en="Check-in Date" data-am="የመግቢያ ቀን">Check-in Date</span>
+              </label>
+              <input type="date" id="checkin-date" required class="w-full bg-cream border border-gray-300 rounded-lg px-3 py-2 text-sm text-charcoal focus:outline-none focus:border-gold">
+            </div>
+
+            <!-- Check-out -->
+            <div class="space-y-1">
+              <label class="block text-xs font-semibold text-gray-600 uppercase tracking-wider flex items-center gap-1">
+                <i class="fa-regular fa-calendar-xmark text-gold"></i>
+                <span data-en="Check-out Date" data-am="የመውጫ ቀን">Check-out Date</span>
+              </label>
+              <input type="date" id="checkout-date" required class="w-full bg-cream border border-gray-300 rounded-lg px-3 py-2 text-sm text-charcoal focus:outline-none focus:border-gold">
+            </div>
+
+            <!-- Guests -->
+            <div class="space-y-1">
+              <label class="block text-xs font-semibold text-gray-600 uppercase tracking-wider flex items-center gap-1">
+                <i class="fa-solid fa-users text-gold"></i>
+                <span data-en="Guests & Room" data-am="የእንግዶች ብዛት">Guests & Room</span>
+              </label>
+              <select id="guest-count" class="w-full bg-cream border border-gray-300 rounded-lg px-3 py-2 text-sm text-charcoal focus:outline-none focus:border-gold">
+                <option value="1 Guest, Standard">1 Guest (Single)</option>
+                <option value="2 Guests, Deluxe">2 Guests (Deluxe King)</option>
+                <option value="3+ Guests, Suite">Family / Executive Suite</option>
+              </select>
+            </div>
+
+            
+<!-- Call to Check Availability -->
+<div>
+  <a
+    href="tel:+251999262728"
+    class="w-full gold-gradient text-charcoal font-bold py-2.5 rounded-lg shadow-md hover:shadow-gold/50 hover:brightness-105 active:scale-95 transition-all text-sm flex items-center justify-center gap-2"
+  >
+    <i class="fa-solid fa-phone"></i>
+    <span data-en="Check Availability" data-am="ክፍል ያረጋግጡ">
+      Check Availability
+    </span>
+  </a>
+</div>
+</form>
+</div>
+
+
+      </div>
+
+      <!-- Quick Scroll Indicator -->
+      <a href="#about" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white/70 hover:text-gold transition-colors animate-bounce hidden sm:block">
+        <i class="fa-solid fa-chevron-down text-xl"></i>
+      </a>
+    </section>
+
+    <!-- About / Experience Section -->
+    <section id="about" class="py-20 bg-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          <!-- Image Collage -->
+          <div class="relative">
+            <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <img src="https://i.postimg.cc/Jh6zs6tP/unnamed.jpg" alt="Yeabsira Hotel Exterior" class="w-full h-96 object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <!-- Secondary overlapping badge -->
+            <div class="absolute -bottom-6 -right-6 z-20 bg-earthGreen text-white p-6 rounded-2xl shadow-xl max-w-xs border border-white/20 hidden sm:block">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold text-xl">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <div>
+                  <h4 class="font-serif font-bold text-sm text-gold" data-en="4.6★ Excellence" data-am="4.6★ የወርቅ ደረጃ">4.6★ Excellence</h4>
+                  <p class="text-xs text-gray-300" data-en="Verified Guest Rating" data-am="በእንግዶች የተረጋገጠ">Verified Guest Rating</p>
+                </div>
+              </div>
+              <p class="text-xs text-gray-200 italic" data-en="“Warm staff, immaculate rooms, and delicious traditional food!”" data-am="“ምርጥ እና ፈጣን አስተናጋጆች፣ ጽሩ ክፍሎች!”">“Warm staff, immaculate rooms, and delicious traditional food!”</p>
+            </div>
+            <div class="absolute -top-6 -left-6 w-32 h-32 bg-gold/20 rounded-full blur-2xl -z-0"></div>
+          </div>
+
+          <!-- Narrative Content -->
+          <div class="space-y-6">
+            <div class="inline-flex items-center gap-2 text-earthGreen font-semibold text-sm uppercase tracking-wider">
+              <span class="w-8 h-0.5 bg-earthGreen"></span>
+              <span data-en="Welcome to Yeabsira Hotel" data-am="እንኳን ወደ የአብስራ ሆቴል በደህና መጡ">Welcome to Yeabsira Hotel</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-charcoal leading-tight">
+              <span data-en="Where Modern Luxury Meets Authentic Ethiopian Hospitality" data-am="ዘመናዊ የሆቴል አገልግሎት ከባህላዊ እንግዳ ተቀባይነት ጋር">Where Modern Luxury Meets Authentic Ethiopian Hospitality</span>
+            </h2>
+
+            <p class="text-gray-600 leading-relaxed" data-en="Strategically positioned in Sodo, Ethiopia, YEABSIRA HOTEL stands as a beacon of comfort for business travelers, tourists, and families. From lush bedding to tailored service and gourmet local delicacies, we turn every visit into an unforgettable memory." data-am="በሶዶ ከተማ እምብርት ላይ የሚገኘው የአብስራ ሆቴል ለንግድ ተጓዦች፣ ለቱሪስቶችና ለቤተሰቦች አስተማማኝና ዘመናዊ እረፍት ይሰጣል።">
+              Strategically positioned in Sodo, Ethiopia, YEABSIRA HOTEL stands as a beacon of comfort for business travelers, tourists, and families. From lush bedding to tailored service and gourmet local delicacies, we turn every visit into an unforgettable memory.
+            </p>
+
+            <!-- Key Highlights Grid -->
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-xl bg-white shadow-sm border border-gold/20 flex items-start gap-3">
+                <i class="fa-solid fa-location-dot text-gold text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-charcoal text-sm" data-en="Prime Sodo Location" data-am="ምርጥ ቦታ">Prime Sodo Location</h4>
+                  <p class="text-xs text-gray-500" data-en="Easy access to center" data-am="ወደ ከተማው ማእከል ቅርብ">Easy access to center</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-white shadow-sm border border-gold/20 flex items-start gap-3">
+                <i class="fa-solid fa-concierge-bell text-gold text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-charcoal text-sm" data-en="Top-Tier Service" data-am="ከፍተኛ አገልግሎት">Top-Tier Service</h4>
+                  <p class="text-xs text-gray-500" data-en="24/7 dedicated reception" data-am="የ24 ሰዓት ዝግጁነት">24/7 dedicated reception</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-white shadow-sm border border-gold/20 flex items-start gap-3">
+                <i class="fa-solid fa-utensils text-gold text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-charcoal text-sm" data-en="Authentic Dining" data-am="ጣፋጭ ምግቦች">Authentic Dining</h4>
+                  <p class="text-xs text-gray-500" data-en="Ethiopian & Global menu" data-am="ሀገር በቀልና ዓለም አቀፍ">Ethiopian & Global menu</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-white shadow-sm border border-gold/20 flex items-start gap-3">
+                <i class="fa-solid fa-shield-halved text-gold text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-charcoal text-sm" data-en="Modern Security" data-am="አስተማማኝ ጸጥታ">Modern Security</h4>
+                  <p class="text-xs text-gray-500" data-en="Secure parking & CCTV" data-am="የመኪና ማቆሚያና ጥበቃ">Secure parking & CCTV</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Button to trigger Side Panel for More Information -->
+            <div class="pt-4">
+              <button onclick="openSidePanel()" class="inline-flex items-center gap-2 border-2 border-gold text-charcoal hover:bg-gold hover:text-white font-bold px-6 py-3 rounded-full transition-all text-sm shadow-sm hover:shadow-md">
+                <i class="fa-solid fa-circle-info text-gold hover:text-white"></i>
+                <span data-en="Learn More About Our Story" data-am="ስለ ታሪካችን በዝርዝር ይወቁ">Learn More About Our Story</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Side Panel Modal for More Info -->
+    <div id="side-panel-overlay" onclick="closeSidePanel()" class="fixed inset-0 bg-black/60 z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <div id="side-panel" class="fixed top-0 right-0 h-full w-full sm:w-[480px] bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 overflow-y-auto flex flex-col justify-between">
+      <div>
+        <div class="p-6 bg-charcoal text-white flex items-center justify-between border-b border-gold/30">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full gold-gradient p-0.5 flex items-center justify-center">
+              <div class="w-full h-full bg-charcoal rounded-full flex items-center justify-center text-gold font-serif font-bold">YH</div>
+            </div>
+            <div>
+              <h3 class="font-serif font-bold text-lg text-gold">YEABSIRA HOTEL</h3>
+              <p class="text-xs text-gray-400">Sodo, Southern Ethiopia</p>
+            </div>
+          </div>
+          <button onclick="closeSidePanel()" class="text-gray-400 hover:text-white text-2xl p-1">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="p-6 space-y-6">
+          <img src="https://i.postimg.cc/6QYV4BTS/A3.avif" alt="Yeabsira Hotel Detail" class="rounded-xl w-full h-48 object-cover shadow-md">
+
+          <div>
+            <h4 class="font-serif font-bold text-xl text-charcoal mb-2" data-en="Our Commitment to Excellence" data-am="የእኛ ጥራትና ቁርጠኝነት">Our Commitment to Excellence</h4>
+            <p class="text-sm text-gray-600 leading-relaxed" data-en="YEABSIRA HOTEL (የአብስራ ሆቴል) was established with a singular vision: to bring world-class accommodation standards to Sodo while honoring traditional Ethiopian warmth and hospitality." data-am="የአብስራ ሆቴል በሶዶ ከተማ ውስጥ ከፍተኛ ደረጃ ያለውን የሆቴል አገልግሎት ከባህላዊ እንግዳ ተቀባይነት ጋር በማቀናጀት የተቋቋመ ሆቴል ነው።">
+              YEABSIRA HOTEL (የአብስራ ሆቴል) was established with a singular vision: to bring world-class accommodation standards to Sodo while honoring traditional Ethiopian warmth and hospitality.
+            </p>
+          </div>
+
+          <div class="space-y-4 border-t border-gray-100 pt-4">
+            <h5 class="font-bold text-sm text-charcoal uppercase tracking-wider text-earthGreen" data-en="Hotel Highlights & Policies" data-am="የሆቴሉ ደንቦችና መረጃዎች">Hotel Highlights & Policies</h5>
+            
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-clock text-gold"></i>
+                <span><strong>Check-in:</strong> 12:00 PM | <strong>Check-out:</strong> 11:00 AM</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-mug-hot text-gold"></i>
+                <span data-en="Complimentary Traditional Coffee Ceremony Every Afternoon" data-am="የነጻ ባህላዊ የቡና ፍላት ስነ-ስርዓት በየቀኑ">Complimentary Traditional Coffee Ceremony Every Afternoon</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-wifi text-gold"></i>
+                <span data-en="High-Speed Fiber Optical Wi-Fi Throughout Premises" data-am="ፈጣን የፋይበር ዋይፋይ ኢንተርኔት">High-Speed Fiber Optical Wi-Fi Throughout Premises</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-car-side text-gold"></i>
+                <span data-en="Free Secure On-Site Parking with 24/7 Guards" data-am="ነፃና የተጠበቀ የመኪና ማቆሚያ">Free Secure On-Site Parking with 24/7 Guards</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-gold/10 p-4 rounded-xl border border-gold/30">
+            <h5 class="font-bold text-sm text-gold-800 mb-1" data-en="Need Custom Event Booking?" data-am="ለስብሰባ ወይስ ልዩ ዝግጅት?">Need Custom Event Booking?</h5>
+            <p class="text-xs text-gray-600 mb-3" data-en="We offer tailored corporate meeting packages and celebratory halls." data-am="ለድርጅታዊ ስብሰባዎችና ለተለያዩ በዓላት አዳራሾቻችን ዝግጁ ናቸው።">We offer tailored corporate meeting packages and celebratory halls.</p>
+            <a href="tel:+251999262728" target="_blank" class="text-xs font-bold text-earthGreen hover:underline flex items-center gap-1">
+              <span data-en="Inquire for Events" data-am="ለስብሰባ ቦታ ይያዙ">Inquire for Events</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 bg-gray-50 border-t border-gray-200">
+        <a href="tel:+251999262728" target="_blank" class="w-full gold-gradient text-charcoal font-bold py-3 rounded-xl block text-center shadow-md hover:brightness-105 transition-all text-sm">
+          <span data-en="Proceed to Reservation Form" data-am="ወደ ማስያዣ ቅጽ ይለፉ">Proceed to Reservation Form</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Rooms & Accommodations Showcase -->
+    <section id="rooms" class="py-20 bg-gray-900 text-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-bed"></i>
+            <span data-en="Luxury Accommodations" data-am="ምቹና ዘመናዊ ክፍሎች">Luxury Accommodations</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight" data-en="Our Rooms & Suites" data-am="የክፍሎቻችን ዝርዝር">
+            Our Rooms & Suites
+          </h2>
+          <p class="text-gray-400 mt-3 text-sm sm:text-base" data-en="Designed for tranquility, ultimate comfort, and timeless elegance." data-am="ለፍጹም እረፍትና ሰላም በሚመች መልኩ የተዘጋጁ።">
+            Designed for tranquility, ultimate comfort, and timeless elegance.
+          </p>
+        </div>
+
+        <!-- Room Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          
+<!-- Room Card 1: Executive Suite -->
+<div class="bg-charcoal border border-gold/20 rounded-2xl overflow-hidden shadow-xl hover:border-gold/60 transition-all duration-300 flex flex-col group">
+
+  <!-- Video Container -->
+  <div class="relative h-64 overflow-hidden">
+
+    <iframe
+      src="https://drive.google.com/file/d/15urHsEyiabsQlRRmLhXZ4opK8LS_DK19/preview"
+      title="Presidential Executive Suite"
+      class="w-full h-full border-0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+
+    <!-- Premium Badge -->
+    <span
+      class="absolute top-4 left-4 z-10 bg-earthGreen text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"
+      data-en="Standard Suite"
+      data-am="መደበኛ ስዊት">
+      Standard Suite
+    </span>
+
+    <!-- Price Badge -->
+    <div class="absolute bottom-4 right-4 z-10 bg-charcoal/90 text-gold px-3 py-1 rounded-lg text-sm font-bold border border-gold/30">
+      <span
+        data-en="ENJOY YOUR STAY "
+        data-am="ቆይታዎን ያጣጥሙ ">
+        ENJOY YOUR STAY
+      </span>
+    </div>
+
+  </div>
+
+  <!-- Room Details -->
+  <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+
+    <div>
+      <h3
+        class="font-serif font-bold text-xl text-white group-hover:text-gold transition-colors"
+        data-en="Standard Executive Suite"
+        data-am="መደበኛ ኤግዚክቲቭ ስዊት">
+        Standard Executive Suite
+      </h3>
+
+      <p
+        class="text-gray-400 text-xs mt-2 line-clamp-2"
+        data-en="Spacious suite with living area, private balcony, panoramic city views, and king bed."
+        data-am="ሰፊ ሳሎን፣ በረንዳ፣ እና ንጉሳዊ አልጋ ያለው ልዩ ክፍል።">
+        Spacious suite with living area, private balcony,
+        panoramic city views, and king bed.
+      </p>
+    </div>
+
+    <!-- Key Features -->
+    <div class="grid grid-cols-2 gap-2 text-xs text-gray-300 pt-2 border-t border-gray-800">
+
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-bed text-gold"></i>
+        King Size Bed
+      </span>
+
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-wifi text-gold"></i>
+        High-Speed Wi-Fi
+      </span>
+
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-city text-gold"></i>
+        Balcony View
+      </span>
+
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-bell text-gold"></i>
+        24/7 Room Service
+      </span>
+
+    </div>
+
+    <!-- Booking Button -->
+    <div class="pt-2 flex items-center gap-2">
+      <a
+        href="tel:+251999262728"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full gold-gradient text-charcoal font-bold py-2.5 rounded-xl text-center hover:brightness-105 transition-all text-sm flex items-center justify-center gap-2">
+
+        <i class="fa-solid fa-check-circle"></i>
+
+        <span
+          data-en="Book Room"
+          data-am="ክፍሉን ይያዙ">
+          Book Room
+        </span>
+
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+          
+<!-- Room Card 2: Deluxe King Room -->
+<div class="bg-charcoal border border-gold/20 rounded-2xl overflow-hidden shadow-xl hover:border-gold/60 transition-all duration-300 flex flex-col group">
+
+  <!-- Video Container -->
+  <div class="relative h-64 overflow-hidden">
+
+    <iframe
+      src="https://drive.google.com/file/d/1fnfBJatdlR2uxbloFl-k4EH2h11G0Uip/preview"
+      title="VIP Yeabsira - Deluxe King Room"
+      class="w-full h-full border-0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+
+    <!-- Popular Badge -->
+    <span
+      class="absolute top-4 left-4 z-10 bg-gold text-charcoal text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"
+      data-en="VIP"
+      data-am="VIP">
+      VIP 
+    </span>
+
+    <!-- Price Badge -->
+    <div class="absolute bottom-4 right-4 z-10 bg-charcoal/90 text-gold px-3 py-1 rounded-lg text-sm font-bold border border-gold/30">
+      <span
+        data-en="ENJOY PREMIUM COMFORT"
+        data-am="በከፍተኛ ምቾት ይደሰቱ">
+         ENJOY PREMIUM COMFORT
+      </span>
+    </div>
+
+  </div>
+
+  <!-- Room Details -->
+  <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+
+    <div>
+      <h3
+        class="font-serif font-bold text-xl text-white group-hover:text-gold transition-colors"
+        data-en="VIP ROOM"
+        data-am="VIP ክፍል">
+        VIP ROOM
+      </h3>
+
+      <p
+        class="text-gray-400 text-xs mt-2 line-clamp-2"
+        data-en="Modern style with premium mattress, work desk, smart TV, and ensuite bath."
+        data-am="ዘመናዊ ዲዛይን፣ ምቹ አልጋ፣ የፅህፈት ጠረጴዛ እና ስማርት ቲቪ ያለው።">
+        Modern style with premium mattress, work desk, smart TV, and ensuite bath.
+      </p>
+    </div>
+
+    <!-- Key Features -->
+    <div class="grid grid-cols-2 gap-2 text-xs text-gray-300 pt-2 border-t border-gray-800">
+
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-bed text-gold"></i>
+        Plush King Bed
+      </span>
+
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-tv text-gold"></i>
+        Smart HDTV
+      </span>
+
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-wind text-gold"></i>
+        Air Window
+      </span>
+
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-shower text-gold"></i>
+        Luxury Shower
+      </span>
+
+    </div>
+
+    <!-- Booking Button -->
+    <div class="pt-2 flex items-center gap-2">
+      <a
+        href="tel:+251999262728"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full gold-gradient text-charcoal font-bold py-2.5 rounded-xl text-center hover:brightness-105 transition-all text-sm flex items-center justify-center gap-2">
+
+        <i class="fa-solid fa-check-circle"></i>
+
+        <span
+          data-en="Book Room"
+          data-am="ክፍሉን ይያዙ">
+          Book Room
+        </span>
+
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+          
+<!-- Room Card 3: Standard Twin Room -->
+<div class="bg-charcoal border border-gold/20 rounded-2xl overflow-hidden shadow-xl hover:border-gold/60 transition-all duration-300 flex flex-col group">
+
+  <!-- Video Container -->
+  <div class="relative h-64 overflow-hidden">
+
+    <iframe
+      src="https://drive.google.com/file/d/12CKatDgOxPmMf3JwMu0u25OwudS2KBgY/preview"
+      title="Standard Twin Room"
+      class="w-full h-full border-0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+
+    <!-- Price Badge -->
+    <div class="absolute bottom-4 right-4 z-10 bg-charcoal/90 text-gold px-3 py-1 rounded-lg text-sm font-bold border border-gold/30">
+      <span
+        data-en="Two single beds"
+        data-am="ሁለት ነጠላ አልጋዎች">
+        Two single beds
+      </span>
+    </div>
+
+  </div>
+
+  <!-- Room Details -->
+  <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+
+    <div>
+      <h3
+        class="font-serif font-bold text-xl text-white group-hover:text-gold transition-colors"
+        data-en="Standard Twin Bed Room"
+        data-am="ስታንዳርድ ትዊን ክፍል">
+        Standard Twin Bed Room
+      </h3>
+
+      <p
+        class="text-gray-400 text-xs mt-2 line-clamp-2"
+        data-en="Ideal for friends or business colleagues with two single comfortable beds and high-speed Wi-Fi."
+        data-am="ለጓደኞች ወይም አብረው ለሚጓዙ የንግድ አጋሮች ተስማሚ ሁለት አልጋዎች ያሉት።">
+        Ideal for friends or business colleagues with two single
+        comfortable beds and high-speed Wi-Fi.
+      </p>
+    </div>
+
+    <!-- Key Features -->
+    <div class="grid grid-cols-2 gap-2 text-xs text-gray-300 pt-2 border-t border-gray-800">
+
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-bed text-gold"></i>
+        2 Twin Beds
+      </span>
+
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-wifi text-gold"></i>
+        High-Speed Wi-Fi
+      </span>
+
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-lock text-gold"></i>
+        In-Room Safe
+      </span>
+
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-shirt text-gold"></i>
+        Daily Housekeeping
+      </span>
+
+    </div>
+
+    <!-- Booking Button -->
+    <div class="pt-2 flex items-center gap-2">
+      <a
+        href="tel:+251999262728"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full gold-gradient text-charcoal font-bold py-2.5 rounded-xl text-center hover:brightness-105 transition-all text-sm flex items-center justify-center gap-2">
+
+        <i class="fa-solid fa-check-circle"></i>
+
+        <span data-en="Book Room" data-am="ክፍሉን ይያዙ">
+          Book Room
+        </span>
+
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+        
+
+        <!-- Direct Booking Callout Banner -->
+        <div class="mt-16 bg-gradient-to-r from-earthGreen via-charcoal to-earthGreen p-8 rounded-2xl border border-gold/30 text-center flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+          <div class="text-left">
+            <h3 class="font-serif font-bold text-2xl text-gold" data-en="Looking for Group or Long-Stay Discounts?" data-am="ለቡድን ወይም ለረጅም ጊዜ ቆይታ ቅናሽ ይፈልጋሉ?">Looking for Group or Long-Stay Discounts?</h3>
+            <p class="text-gray-300 text-sm mt-1" data-en="Contact our reservation team directly on WhatsApp or phone for custom packages." data-am="በቀጥታ በዋትስአፕ ወይም በስልክ በመደወል ልዩ ቅናሽ ያግኙ።">Contact our reservation team directly on WhatsApp or phone for custom packages.</p>
+          </div>
+          <a href="tel:+251999262728" target="_blank" class="gold-gradient text-charcoal font-bold px-8 py-3.5 rounded-full hover:scale-105 transition-all text-sm shadow-lg whitespace-nowrap">
+            <span data-en="Reserve Online Now" data-am="አሁኑኑ በኢንተርኔት ይዘዙ">Reserve Online Now</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Dining Showcase -->
+    <section id="dining" class="py-20 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 text-gold-700 font-semibold text-sm uppercase tracking-wider mb-2">
+              <i class="fa-solid fa-utensils"></i>
+              <span data-en="Culinary Delights" data-am="የምግብና የመጠጥ አገልግሎት">Culinary Delights</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-charcoal leading-tight mb-4" data-en="Gourmet Restaurant & Traditional Cafe" data-am="ዘመናዊ ምግብ ቤት እና ባህላዊ ካፌ">
+              Gourmet Restaurant & Traditional Cafe
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-6" data-en="Indulge in an exquisite blend of authentic Ethiopian traditional cuisine—including fresh Injera, sizzling Tibs, and local specialties—alongside mouthwatering international dishes prepared by skilled chefs." data-am="በሆቴላችን ጣፋጭ ባህላዊ የሀገር ውስጥ ምግቦችን (እንደ ጥብስ፣ አጋልግሎ) እና ዘመናዊ የውጭ ምግቦችን ያገኛሉ።">
+              Indulge in an exquisite blend of authentic Ethiopian traditional cuisine—including fresh Injera, sizzling Tibs, and local specialties—alongside mouthwatering international dishes prepared by skilled chefs.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm border border-gray-100">
+                <div class="w-12 h-12 rounded-full bg-gold/10 text-gold flex items-center justify-center text-xl shrink-0">
+                  <i class="fa-solid fa-mug-hot"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-charcoal text-base" data-en="Traditional Ethiopian Coffee Ceremony" data-am="ባህላዊ የቡና ፍላት">Traditional Ethiopian Coffee Ceremony</h4>
+                  <p class="text-gray-500 text-xs mt-1" data-en="Experience the rich aroma of freshly roasted Ethiopian coffee beans served with traditional popcorn daily." data-am="በቀኑ ክፍለ ጊዜ በሚቀርበው መዓዛው የሚስብ ባህላዊ የቡና ፍላት ይደሰቱ።">Experience the rich aroma of freshly roasted Ethiopian coffee beans served with traditional popcorn daily.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm border border-gray-100">
+                <div class="w-12 h-12 rounded-full bg-earthGreen/10 text-earthGreen flex items-center justify-center text-xl shrink-0">
+                  <i class="fa-solid fa-wine-glass"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-charcoal text-base" data-en="Bar & Relaxing Lounge" data-am="ባር እና ላውንጅ">Bar & Relaxing Lounge</h4>
+                  <p class="text-gray-500 text-xs mt-1" data-en="Unwind after a long day with premium spirits, wines, beers, and handcrafted fresh juices." data-am="ከተለያዩ መጠጦችና ትኩስ ጭማቂዎች ጋር ዘና የሚሉበት አስተማማኝ ቦታ።">Unwind after a long day with premium spirits, wines, beers, and handcrafted fresh juices.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Food Image Grid -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="space-y-4">
+              <img src="https://i.postimg.cc/tJPFn7XN/1-1.jpg" alt="Gourmet Dish" class="rounded-2xl shadow-lg object-cover h-64 w-full hover:scale-105 transition-transform duration-300">
+              <img src="https://i.postimg.cc/JnSbhjWY/1-2.jpg" alt="Restaurant Interior" class="rounded-2xl shadow-lg object-cover h-48 w-full hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="space-y-4 pt-8">
+              <img src="https://i.postimg.cc/26g45nfV/1-5.jpg" alt="Coffee Ceremony" class="rounded-2xl shadow-lg object-cover h-48 w-full hover:scale-105 transition-transform duration-300">
+              <img src="https://i.postimg.cc/JnsNmPSZ/1-4.jpg" alt="Dining Table" class="rounded-2xl shadow-lg object-cover h-64 w-full hover:scale-105 transition-transform duration-300">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Amenities Grid Section -->
+    <section id="amenities" class="py-20 bg-charcoal text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-list-check"></i>
+            <span data-en="World-Class Services" data-am="የምናቀርባቸው አገልግሎቶች">World-Class Services</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight" data-en="Hotel Amenities & Facilities" data-am="የሆቴሉ መገልገያዎች">
+            Hotel Amenities & Facilities
+          </h2>
+          <p class="text-gray-400 mt-2 text-sm" data-en="Everything you need for a comfortable, safe, and pleasant stay." data-am="ለምቾትዎና ለሰላምዎ የሚያስፈልጉ ሁሉ አሟልተናል።">
+            Everything you need for a comfortable, safe, and pleasant stay.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Amenity 1 -->
+          <div class="bg-charcoal-light p-6 rounded-2xl border border-gold/20 hover:border-gold transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-2xl gold-gradient p-0.5 mb-4 group-hover:scale-110 transition-transform">
+              <div class="w-full h-full bg-charcoal rounded-[14px] flex items-center justify-center text-gold text-2xl">
+                <i class="fa-solid fa-wifi"></i>
+              </div>
+            </div>
+            <h3 class="font-bold text-lg text-white mb-2" data-en="High-Speed Wi-Fi" data-am="ፈጣን ዋይፋይ">High-Speed Wi-Fi</h3>
+            <p class="text-gray-400 text-xs leading-relaxed" data-en="Complimentary fast Internet access available throughout rooms, lobby, and dining areas." data-am="በሁሉም ክፍሎችና አዳራሾች ውስጥ ነፃና ፈጣን ኢንተርኔት።">
+              Complimentary fast Internet access available throughout rooms, lobby, and dining areas.
+            </p>
+          </div>
+
+          <!-- Amenity 2 -->
+          <div class="bg-charcoal-light p-6 rounded-2xl border border-gold/20 hover:border-gold transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-2xl gold-gradient p-0.5 mb-4 group-hover:scale-110 transition-transform">
+              <div class="w-full h-full bg-charcoal rounded-[14px] flex items-center justify-center text-gold text-2xl">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+            </div>
+            <h3 class="font-bold text-lg text-white mb-2" data-en="24/7 On-Site Security" data-am="የ24 ሰዓት ጥበቃ">24/7 On-Site Security</h3>
+            <p class="text-gray-400 text-xs leading-relaxed" data-en="Professional security guards and CCTV surveillance for complete peace of mind." data-am="አስተማማኝ የጥበቃ አባላትና የካሜራ ክትትል።">
+              Professional security guards and CCTV surveillance for complete peace of mind.
+            </p>
+          </div>
+
+          <!-- Amenity 3 -->
+          <div class="bg-charcoal-light p-6 rounded-2xl border border-gold/20 hover:border-gold transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-2xl gold-gradient p-0.5 mb-4 group-hover:scale-110 transition-transform">
+              <div class="w-full h-full bg-charcoal rounded-[14px] flex items-center justify-center text-gold text-2xl">
+                <i class="fa-solid fa-square-parking"></i>
+              </div>
+            </div>
+            <h3 class="font-bold text-lg text-white mb-2" data-en="Ample Secure Parking" data-am="የመኪና ማቆሚያ">Ample Secure Parking</h3>
+            <p class="text-gray-400 text-xs leading-relaxed" data-en="Spacious and safe parking ground reserved exclusively for hotel guests." data-am="ለእንግዶች ተሽከርካሪዎች የተዘጋጀ ሰፊና የተጠበቀ ቦታ።">
+              Spacious and safe parking ground reserved exclusively for hotel guests.
+            </p>
+          </div>
+
+          <!-- Amenity 4 -->
+          <div class="bg-charcoal-light p-6 rounded-2xl border border-gold/20 hover:border-gold transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-2xl gold-gradient p-0.5 mb-4 group-hover:scale-110 transition-transform">
+              <div class="w-full h-full bg-charcoal rounded-[14px] flex items-center justify-center text-gold text-2xl">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+            </div>
+            <h3 class="font-bold text-lg text-white mb-2" data-en="Conference & Events" data-am="የስብሰባ አዳራሽ">Conference & Events</h3>
+            <p class="text-gray-400 text-xs leading-relaxed" data-en="Versatile hall equipped with modern audio-visual systems for meetings and banquets." data-am="ለተለያዩ ስብሰባዎችና ውይይቶች የሚያገለግል አዳራሽ።">
+              Versatile hall equipped with modern audio-visual systems for meetings and banquets.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="location" class="py-20 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 text-earthGreen font-semibold text-sm uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-map-pin"></i>
+            <span data-en="Find Us in Sodo" data-am="በሶዶ ያግኙን">Find Us in Sodo</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-charcoal tracking-tight" data-en="Location & Direct Contact" data-am="አድራሻና የመገናኛ መስመሮች">
+            Location & Direct Contact
+          </h2>
+          <p class="text-gray-600 mt-2 text-sm" data-en="Conveniently situated in Wolaita Sodo, Ethiopia." data-am="በወላይታ ሶዶ ከተማ ውስጥ በቀላሉ የሚገኝ።">
+            Conveniently situated in Wolaita Sodo, Ethiopia.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Contact Info Box -->
+          <div class="lg:col-span-5 bg-white p-8 rounded-2xl shadow-xl border border-gold/20 space-y-6">
+            <h3 class="font-serif font-bold text-2xl text-charcoal border-b border-gray-100 pb-4" data-en="Get in Touch" data-am="ያነጋግሩን">Get in Touch</h3>
+
+            <div class="space-y-4">
+              <!-- Address -->
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-gold/10 text-gold flex items-center justify-center text-lg shrink-0">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal" data-en="Address" data-am="አድራሻ">Address</h4>
+                  <p class="text-sm text-gray-600">YEABSIRA HOTEL (የአብስራ ሆቴል)</p>
+                  <p class="text-xs text-gray-500">Sodo, Wolaita Zone, Southern Ethiopia</p>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-gold/10 text-gold flex items-center justify-center text-lg shrink-0">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal" data-en="Phone / Mobile" data-am="ስልክ ቁጥር">Phone / Mobile</h4>
+                  <a href="tel:+251999262728" class="text-sm text-gold-700 font-bold hover:underline">+251 99 926 2728</a>
+                  <p class="text-xs text-gray-500" data-en="Available 24 Hours for bookings" data-am="ለ24 ሰዓት ዝግጁ">Available 24 Hours for bookings</p>
+                </div>
+              </div>
+
+              <!-- Instant Direct Messaging Buttons -->
+              <div class="pt-4 border-t border-gray-100 space-y-3">
+                <h4 class="font-bold text-xs uppercase tracking-wider text-gray-500" data-en="Quick Messaging Options" data-am="ፈጣን የመልእክት አማራጮች">Quick Messaging Options</h4>
+                
+                <div class="grid grid-cols-2 gap-3">
+                  <!-- WhatsApp -->
+                  <a href="https://wa.me/251999262728?text=Hello%20Yeabsira%20Hotel,%20I%20would%20like%20to%20inquire%20about%20a%20room%20reservation." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm transition-all">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>WhatsApp</span>
+                  </a>
+
+                  <!-- Telegram -->
+                  <a href="https://t.me/+251999262728" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm transition-all">
+                    <i class="fa-brands fa-telegram text-lg"></i>
+                    <span>Telegram</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="pt-2">
+              <a href="tel:+251999262728" target="_blank" class="w-full gold-gradient text-charcoal font-bold py-3 rounded-xl block text-center shadow-md hover:brightness-105 transition-all text-sm flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span data-en="Open Full Reservation Form" data-am="የቦታ ማስያዣ ቅጹን ይክፈቱ">Open Full Reservation Form</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Embedded Interactive Map Card -->
+          <div class="lg:col-span-7 bg-white rounded-2xl shadow-xl overflow-hidden border border-gold/20 h-[420px] relative">
+            <iframe 
+              title="Yeabsira Hotel Location Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470.65368363850104!2d37.760173256236094!3d6.863291199321485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17b1b1cbe6321f35%3A0x6aa102d27b76d492!2zWUVBQlNJUkEgSE9URUx84Yuo4Yqg4Yml4Yi14YirIOGIhuGJtOGIjQ!5e1!3m2!1sen!2set!4v1792026491113!5m2!1sen!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" 
+              class="w-full h-full border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            
+            <div class="absolute bottom-4 left-4 bg-charcoal/90 text-white px-4 py-2 rounded-xl text-xs backdrop-blur-md border border-gold/30 flex items-center gap-2">
+              <i class="fa-solid fa-compass text-gold"></i>
+              <span>Sodo, Ethiopia Map View</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-charcoal text-white pt-16 pb-8 border-t border-gold/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-gray-800">
+          
+          <!-- Brand Info -->
+          <div class="space-y-4 md:col-span-1">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full gold-gradient p-0.5 flex items-center justify-center">
+                <div class="w-full h-full bg-charcoal rounded-full flex items-center justify-center text-gold font-serif font-bold">YH</div>
+              </div>
+              <span class="font-serif font-bold text-lg text-white">YEABSIRA HOTEL</span>
+            </div>
+            <p class="text-xs text-gray-400 leading-relaxed" data-en="Unmatched Ethiopian hospitality, modern rooms, and culinary excellence in Sodo." data-am="ምርጥ የእንግዳ ተቀባይነት አገልግሎት፣ ዘመናዊ ክፍሎች እና ጣፋጭ ምግቦች በሶዶ ከተማ።">
+              Unmatched Ethiopian hospitality, modern rooms, and culinary excellence in Sodo.
+            </p>
+            <div class="flex space-x-3 text-gold">
+              <a href="https://www.tiktok.com/@yeabsira_hotel" class="w-8 h-8 rounded-full bg-charcoal-light flex items-center justify-center hover:bg-gold hover:text-charcoal transition-colors"><i class="fa-brands fa-tiktok text-sm"></i></a>
+              <a href="#" class="w-8 h-8 rounded-full bg-charcoal-light flex items-center justify-center hover:bg-gold hover:text-charcoal transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
+              <a href="https://t.me/+251999262728" target="_blank" class="w-8 h-8 rounded-full bg-charcoal-light flex items-center justify-center hover:bg-gold hover:text-charcoal transition-colors"><i class="fa-brands fa-telegram text-sm"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Navigation Links -->
+          <div>
+            <h4 class="font-serif font-bold text-sm text-gold uppercase tracking-wider mb-4" data-en="Quick Links" data-am="ፈጣን ማያያዣዎች">Quick Links</h4>
+            <ul class="space-y-2 text-xs text-gray-300">
+              <li><a href="#home" class="hover:text-gold transition-colors" data-en="Home" data-am="መነሻ">Home</a></li>
+              <li><a href="#about" class="hover:text-gold transition-colors" data-en="About Us" data-am="ስለ እኛ">About Us</a></li>
+              <li><a href="#rooms" class="hover:text-gold transition-colors" data-en="Rooms & Suites" data-am="ክፍሎች">Rooms & Suites</a></li>
+              <li><a href="#dining" class="hover:text-gold transition-colors" data-en="Dining & Cafe" data-am="ምግብ ቤት">Dining & Cafe</a></li>
+              <li><a href="#amenities" class="hover:text-gold transition-colors" data-en="Amenities" data-am="አገልግሎቶች">Amenities</a></li>
+            </ul>
+          </div>
+
+          <!-- Business Hours -->
+          <div>
+            <h4 class="font-serif font-bold text-sm text-gold uppercase tracking-wider mb-4" data-en="Operating Hours" data-am="የሥራ ሰዓት">Operating Hours</h4>
+            <ul class="space-y-2 text-xs text-gray-300">
+              <li class="flex justify-between"><span>Reception / Check-in:</span> <span class="text-gold">24 / 7</span></li>
+              <li class="flex justify-between"><span>Restaurant:</span> <span>6:00 AM - 10:00 PM</span></li>
+              <li class="flex justify-between"><span>Coffee Ceremony:</span> <span>2:00 PM - 6:00 PM</span></li>
+            </ul>
+          </div>
+
+          <!-- Direct Reservation CTA Box -->
+          <div class="bg-charcoal-light p-4 rounded-xl border border-gold/30">
+            <h4 class="font-bold text-xs text-gold mb-2" data-en="Direct Reservation" data-am="ቀጥታ ማስያዣ">Direct Reservation</h4>
+            <p class="text-xs text-gray-400 mb-3" data-en="Call for reservations" data-am="ቦታ ለማስያዝ ይደውሉ።">Call us directly for reservations.</p>
+            <a href="tel:+251999262728" target="_blank" class="w-full gold-gradient text-charcoal text-xs font-bold py-2 rounded-lg block text-center hover:brightness-105 transition-all">
+              <span data-en="Book Now" data-am="አሁኑኑ ይዘዙ">Book Now</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Powered By ExSofós System GEN -->
+<div class="border-t border-gold/20 py-5 px-4">
+  <a
+    href="https://main.exsofossgen.great-site.net/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 group"
+    aria-label="Powered by ExSofós System GEN">
+
+    <span class="text-gray-400 text-xs tracking-wide">
+      Powered by
+    </span>
+
+    <img
+      src="https://i.postimg.cc/vT6pKRyN/25Sep2424-Simon-Pro-Upload-page-0001.jpg"
+      alt="ExSofós System GEN Logo"
+      class="w-40 h-40 object-contain transition-transform duration-300 group-hover:scale-120"
+      loading="lazy">
+    <span class="text-gold text-sm font-semibold tracking-wide group-hover:brightness-150 transition-all">
+      <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+    </span>
+
+  </a>
+</div>
+
+        <!-- Copyright & Developer Credit -->
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
+          <p>© <span id="year-holder">2026</span> YEABSIRA HOTEL (የአብስራ ሆቴል). All rights reserved.</p>
+          
+          <p class="flex items-center gap-1">
+            <span data-en="Developed by" data-am="የተሰራው በ">Developed by</span>
+            <a href="https://exsofssystemgenenterprisewebsite.vercel.app" target="_blank" rel="noopener noreferrer" class="text-gold font-bold hover:underline transition-all">
+              Abenezer Samuel
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Interactive JavaScript Engine -->
+    <script>
+      // Current active language: 'en' or 'am'
+      let currentLang = 'en';
+
+      // Set copyright year dynamically
+      document.getElementById('year-holder').textContent = new Date().getFullYear();
+
+      // Language Switcher Functionality
+      function toggleLanguage(lang) {
+        if (lang) {
+          currentLang = lang;
+        } else {
+          currentLang = currentLang === 'en' ? 'am' : 'en';
+        }
+
+        // Update button states
+        const btnEn = document.getElementById('btn-lang-en');
+        const btnAm = document.getElementById('btn-lang-am');
+        const mobileLangLabel = document.getElementById('mobile-lang-label');
+
+        if (currentLang === 'am') {
+          if (btnEn && btnAm) {
+            btnEn.className = 'px-3 py-1 rounded-full font-bold text-gray-300 hover:text-gold transition-all';
+            btnAm.className = 'px-3 py-1 rounded-full font-bold bg-gold text-charcoal transition-all';
+          }
+          if (mobileLangLabel) mobileLangLabel.textContent = 'አማርኛ';
+        } else {
+          if (btnEn && btnAm) {
+            btnEn.className = 'px-3 py-1 rounded-full font-bold bg-gold text-charcoal transition-all';
+            btnAm.className = 'px-3 py-1 rounded-full font-bold text-gray-300 hover:text-gold transition-all';
+          }
+          if (mobileLangLabel) mobileLangLabel.textContent = 'English';
+        }
+
+        // Dynamic Text Replacement Across Webpage
+        const translatableElements = document.querySelectorAll('[data-en][data-am]');
+        translatableElements.forEach(el => {
+          const text = el.getAttribute(`data-${currentLang}`);
+          if (text) {
+            el.textContent = text;
+          }
+        });
+      }
+
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+        menu.classList.toggle('hidden');
+        
+        if (menu.classList.contains('hidden')) {
+          icon.className = 'fa-solid fa-bars';
+        } else {
+          icon.className = 'fa-solid fa-xmark';
+        }
+      }
+
+      // Side Panel Functions for About Details
+      function openSidePanel() {
+        const panel = document.getElementById('side-panel');
+        const overlay = document.getElementById('side-panel-overlay');
+        
+        overlay.classList.remove('pointer-events-none', 'opacity-0');
+        overlay.classList.add('opacity-100');
+        panel.classList.remove('translate-x-full');
+      }
+
+      function closeSidePanel() {
+        const panel = document.getElementById('side-panel');
+        const overlay = document.getElementById('side-panel-overlay');
+        
+        overlay.classList.add('pointer-events-none', 'opacity-0');
+        overlay.classList.remove('opacity-100');
+        panel.classList.add('translate-x-full');
+      }
+
+      // Hero Background Carousel Slider
+      let currentHeroIndex = 1;
+      setInterval(() => {
+        const nextIndex = (currentHeroIndex % 3) + 1;
+        document.getElementById(`hero-bg-${currentHeroIndex}`).classList.remove('opacity-100');
+        document.getElementById(`hero-bg-${currentHeroIndex}`).classList.add('opacity-0');
+        
+        document.getElementById(`hero-bg-${nextIndex}`).classList.remove('opacity-0');
+        document.getElementById(`hero-bg-${nextIndex}`).classList.add('opacity-100');
+        
+        currentHeroIndex = nextIndex;
+      }, 5000);
+
+      // Handle Quick Search Submission -> Directs to Google Form
+      function handleQuickSearch(event) {
+        event.preventDefault();
+        const checkin = document.getElementById('checkin-date').value;
+        const checkout = document.getElementById('checkout-date').value;
+        const guest = document.getElementById('guest-count').value;
+
+        // Redirect directly to the requested Google Forms link
+        window.open(BOOKING_URL, '_blank');
+      }
+
+      // Pre-fill initial date defaults (today and tomorrow)
+      window.addEventListener('DOMContentLoaded', () => {
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+
+        const formatDate = (date) => date.toISOString().split('T')[0];
+        
+        const checkinInput = document.getElementById('checkin-date');
+        const checkoutInput = document.getElementById('checkout-date');
+        
+        if (checkinInput && checkoutInput) {
+          checkinInput.value = formatDate(today);
+          checkoutInput.value = formatDate(tomorrow);
+        }
+      });
+    </script>
+</body>
+</html>
